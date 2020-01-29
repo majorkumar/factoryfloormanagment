@@ -1,12 +1,12 @@
 //#include <MQUnifiedsensor.h>
-#include <DHT.h>
-#define DHTPIN 27
-#define DHTTYPE DHT11
-DHT dht(DHTPIN, DHTTYPE);
+#include <DHT.h>          //DHT library imported through Arduino library download
+#define DHTPIN 27        //DHT power pin define
+#define DHTTYPE DHT11    // DHT11 model used, so we have to define the model name 
+DHT dht(DHTPIN, DHTTYPE); //
 
-//pin for sensor input vcc
+//pin for sensor input vcc/power
 #define VIBPIN 12
-#define MQ2PIN 13
+#define MQ2PIN 32
 #define CURRENTPIN 34
 
 //pin for alarming sensor
@@ -16,11 +16,11 @@ DHT dht(DHTPIN, DHTTYPE);
 #define TEMPALARM 18
 #define HUMDALARM 19
 
-#include <WiFi.h>
+#include <WiFi.h>                 //library imported for wifi operation
 #define WIFI_SSID "OpTi^^uS"
 #define WIFI_PASSWORD "prime100"
 
-#include <PubSubClient.h>
+#include <PubSubClient.h>           // library for mqtt publish and subscribtion
 const char* mqttServer = "192.168.137.194";
 const int mqttPort = 1883;
 WiFiClient espClient;
