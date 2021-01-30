@@ -17,11 +17,11 @@ DHT dht(DHTPIN, DHTTYPE); //
 #define HUMDALARM 19
 
 #include <WiFi.h>                 //library imported for wifi operation
-#define WIFI_SSID "OpTi^^uS"
-#define WIFI_PASSWORD "prime100"
+#define WIFI_SSID "OpTimuS"
+#define WIFI_PASSWORD "prime"
 
 #include <PubSubClient.h>           // library for mqtt publish and subscribtion
-const char* mqttServer = "192.168.137.194";
+const char* mqttServer = "192.168.136.155";
 const int mqttPort = 1883;
 WiFiClient espClient;
 PubSubClient client(espClient);
